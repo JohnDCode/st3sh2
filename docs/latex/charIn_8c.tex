@@ -1,0 +1,36 @@
+\doxysection{src/parse/char\+In/char\+In.c File Reference}
+\hypertarget{charIn_8c}{}\label{charIn_8c}\index{src/parse/charIn/charIn.c@{src/parse/charIn/charIn.c}}
+{\ttfamily \#include "{}parse/char\+In/char\+In.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for char\+In.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{charIn_8c_a762e387bb7a0185e1d1bc05995e5ff15}{create\+Char\+In}} (char c, \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}} quoted\+Status)
+\begin{DoxyCompactList}\small\item\em Constructs and returns a new \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{charIn_8c_a762e387bb7a0185e1d1bc05995e5ff15}\label{charIn_8c_a762e387bb7a0185e1d1bc05995e5ff15} 
+\index{charIn.c@{charIn.c}!createCharIn@{createCharIn}}
+\index{createCharIn@{createCharIn}!charIn.c@{charIn.c}}
+\doxysubsubsection{\texorpdfstring{createCharIn()}{createCharIn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*} create\+Char\+In (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{\mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}}}]{quoted\+Status }\end{DoxyParamCaption})}
+
+
+
+Constructs and returns a new \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & User inputted character. \\
+\hline
+\mbox{\texttt{ in}}  & {\em quoted\+Status} & Quote block character is within.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constructed \doxylink{structCharIn__t}{Char\+In\+\_\+t} object.
+\end{DoxyReturn}
+Dynamically allocates a new \doxylink{structCharIn__t}{Char\+In\+\_\+t} object with a character and quote block. Returns pointer to the constructed object. 

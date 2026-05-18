@@ -1,0 +1,222 @@
+\doxysection{src/parse/token/token.c File Reference}
+\hypertarget{token_8c}{}\label{token_8c}\index{src/parse/token/token.c@{src/parse/token/token.c}}
+{\ttfamily \#include "{}parse/token/token.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$regex.\+h$>$}\newline
+Include dependency graph for token.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{token_8c_af36fa1c27b39cbbbbd465af6182c04ea}{tokenize\+Input}} (char \texorpdfstring{$\ast$}{*}input, int \texorpdfstring{$\ast$}{*}num\+Processed\+Tokens, \mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}out\+Tokens, int last\+Exit)
+\begin{DoxyCompactList}\small\item\em Transform an input string into a series of tokens. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{token_8c_a528ee582d23e5a52baf66d7d9dd368d7}{set\+Type}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token)
+\begin{DoxyCompactList}\small\item\em Set the type of a \doxylink{structToken__t}{Token\+\_\+t} object baesd on its characters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8c_a82f3d9eb6a54f294c40cf1ea2738a784}{resize\+Buffer}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, int new\+Buff\+Size)
+\begin{DoxyCompactList}\small\item\em Resize the buffer for storing characters in a \doxylink{structToken__t}{Token\+\_\+t} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8c_abed75876f2f3912cdf9be62fb86c306c}{contains\+Char}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, char c)
+\begin{DoxyCompactList}\small\item\em Returns if a \doxylink{structToken__t}{Token\+\_\+t} contains a particular character. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8c_aba906f345ba5b3800a7e54fb81c66d80}{contains\+Substring}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, char \texorpdfstring{$\ast$}{*}sub)
+\begin{DoxyCompactList}\small\item\em Returns if a \doxylink{structToken__t}{Token\+\_\+t} contains a particular substring. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{token_8c_af2b55c173ecc69efd53a8d4195b04834}{extract\+Chars}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, int expand)
+\begin{DoxyCompactList}\small\item\em Extracts the raw characters from \doxylink{structCharIn__t}{Char\+In\+\_\+t} objects within a \doxylink{structToken__t}{Token\+\_\+t} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8c_a2270a4c806e8bca9836935092c32c850}{is\+Redirect}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token)
+\begin{DoxyCompactList}\small\item\em Returns if a \doxylink{structToken__t}{Token\+\_\+t} is a redirect operator or not. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8c_a22d15e005f23acc6dd7c30ea1fd1413a}{is\+Separator}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token)
+\begin{DoxyCompactList}\small\item\em Returns if a \doxylink{structToken__t}{Token\+\_\+t} is a separator operator or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{token_8c_a6bf2dc32f0ff7973ec876be1a5b9fee7}{print\+Token}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token)
+\begin{DoxyCompactList}\small\item\em For debug, just print the contents of a token. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{token_8c_a0e082aa9e9ae63fb97ad5610b83a843b}{free\+Tokens}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}tokens, int num\+Tokens)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{token_8c_abed75876f2f3912cdf9be62fb86c306c}\label{token_8c_abed75876f2f3912cdf9be62fb86c306c} 
+\index{token.c@{token.c}!containsChar@{containsChar}}
+\index{containsChar@{containsChar}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{containsChar()}{containsChar()}}
+{\footnotesize\ttfamily int contains\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Returns if a \doxylink{structToken__t}{Token\+\_\+t} contains a particular character. 
+
+\doxylink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t} which is a word contains raw user input / words. Tests if a particular token, which must be a word, contains a character.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & The character to test if @token contains.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if character is contained, 0 if not. 
+\end{DoxyReturn}
+\Hypertarget{token_8c_aba906f345ba5b3800a7e54fb81c66d80}\label{token_8c_aba906f345ba5b3800a7e54fb81c66d80} 
+\index{token.c@{token.c}!containsSubstring@{containsSubstring}}
+\index{containsSubstring@{containsSubstring}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{containsSubstring()}{containsSubstring()}}
+{\footnotesize\ttfamily int contains\+Substring (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{char \texorpdfstring{$\ast$}{*}}]{sub }\end{DoxyParamCaption})}
+
+
+
+Returns if a \doxylink{structToken__t}{Token\+\_\+t} contains a particular substring. 
+
+\doxylink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t} which is a word contains raw user input / words. Tests if a particular token, which must be a word, contains a substring.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sub} & The substring to test if @token contains.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if substring is valid, 0 if not. 
+\end{DoxyReturn}
+\Hypertarget{token_8c_af2b55c173ecc69efd53a8d4195b04834}\label{token_8c_af2b55c173ecc69efd53a8d4195b04834} 
+\index{token.c@{token.c}!extractChars@{extractChars}}
+\index{extractChars@{extractChars}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{extractChars()}{extractChars()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} extract\+Chars (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{int}]{expand }\end{DoxyParamCaption})}
+
+
+
+Extracts the raw characters from \doxylink{structCharIn__t}{Char\+In\+\_\+t} objects within a \doxylink{structToken__t}{Token\+\_\+t} object. 
+
+Dynamically allocates and returns a list of characters, extracted from all \doxylink{structCharIn__t}{Char\+In\+\_\+t} objects within a \doxylink{structToken__t}{Token\+\_\+t} object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to extract text from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL if token is invalid, else the deep copy of raw chars. 
+\end{DoxyReturn}
+\Hypertarget{token_8c_a0e082aa9e9ae63fb97ad5610b83a843b}\label{token_8c_a0e082aa9e9ae63fb97ad5610b83a843b} 
+\index{token.c@{token.c}!freeTokens@{freeTokens}}
+\index{freeTokens@{freeTokens}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{freeTokens()}{freeTokens()}}
+{\footnotesize\ttfamily void free\+Tokens (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{tokens,  }\item[{int}]{num\+Tokens }\end{DoxyParamCaption})}
+
+\Hypertarget{token_8c_a2270a4c806e8bca9836935092c32c850}\label{token_8c_a2270a4c806e8bca9836935092c32c850} 
+\index{token.c@{token.c}!isRedirect@{isRedirect}}
+\index{isRedirect@{isRedirect}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{isRedirect()}{isRedirect()}}
+{\footnotesize\ttfamily int is\+Redirect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token }\end{DoxyParamCaption})}
+
+
+
+Returns if a \doxylink{structToken__t}{Token\+\_\+t} is a redirect operator or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if redirect operator, 0 if not, 0 if error.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns 0 if @token is null. 
+\end{DoxyNote}
+\Hypertarget{token_8c_a22d15e005f23acc6dd7c30ea1fd1413a}\label{token_8c_a22d15e005f23acc6dd7c30ea1fd1413a} 
+\index{token.c@{token.c}!isSeparator@{isSeparator}}
+\index{isSeparator@{isSeparator}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{isSeparator()}{isSeparator()}}
+{\footnotesize\ttfamily int is\+Separator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token }\end{DoxyParamCaption})}
+
+
+
+Returns if a \doxylink{structToken__t}{Token\+\_\+t} is a separator operator or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if separator operator, 0 if not, 0 if error.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns 0 if @token is null. 
+\end{DoxyNote}
+\Hypertarget{token_8c_a6bf2dc32f0ff7973ec876be1a5b9fee7}\label{token_8c_a6bf2dc32f0ff7973ec876be1a5b9fee7} 
+\index{token.c@{token.c}!printToken@{printToken}}
+\index{printToken@{printToken}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{printToken()}{printToken()}}
+{\footnotesize\ttfamily void print\+Token (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token }\end{DoxyParamCaption})}
+
+
+
+For debug, just print the contents of a token. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{token_8c_a82f3d9eb6a54f294c40cf1ea2738a784}\label{token_8c_a82f3d9eb6a54f294c40cf1ea2738a784} 
+\index{token.c@{token.c}!resizeBuffer@{resizeBuffer}}
+\index{resizeBuffer@{resizeBuffer}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{resizeBuffer()}{resizeBuffer()}}
+{\footnotesize\ttfamily int resize\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{int}]{new\+Buff\+Size }\end{DoxyParamCaption})}
+
+
+
+Resize the buffer for storing characters in a \doxylink{structToken__t}{Token\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query. \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Buff\+Size} & The new buffer size to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New buffer size of token object @token or -\/1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{token_8c_a528ee582d23e5a52baf66d7d9dd368d7}\label{token_8c_a528ee582d23e5a52baf66d7d9dd368d7} 
+\index{token.c@{token.c}!setType@{setType}}
+\index{setType@{setType}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token }\end{DoxyParamCaption})}
+
+
+
+Set the type of a \doxylink{structToken__t}{Token\+\_\+t} object baesd on its characters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{token_8c_af36fa1c27b39cbbbbd465af6182c04ea}\label{token_8c_af36fa1c27b39cbbbbd465af6182c04ea} 
+\index{token.c@{token.c}!tokenizeInput@{tokenizeInput}}
+\index{tokenizeInput@{tokenizeInput}!token.c@{token.c}}
+\doxysubsubsection{\texorpdfstring{tokenizeInput()}{tokenizeInput()}}
+{\footnotesize\ttfamily int tokenize\+Input (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{input,  }\item[{int \texorpdfstring{$\ast$}{*}}]{num\+Processed\+Tokens,  }\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{out\+Tokens,  }\item[{int}]{last\+Exit }\end{DoxyParamCaption})}
+
+
+
+Transform an input string into a series of tokens. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & The raw user input to tokenize. \\
+\hline
+\mbox{\texttt{ out}}  & {\em num\+Processed\+Tokens} & The number of processed tokens before and after tokenization. \\
+\hline
+\mbox{\texttt{ out}}  & {\em out\+Tokens} & The \doxylink{structToken__t}{Token\+\_\+t} array to populate. \\
+\hline
+\mbox{\texttt{ in}}  & {\em last\+Exit} & The status from the last call to tokenize.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code of tokenization. 0 if success, 1 if general error, and -\/1 on unclosed single quote, -\/2 on unclosed double quote, -\/3 on unclosed backslash, -\/4 on unclosed pipe, -\/5 on unclosed AND, -\/6 on unclosed OR. 
+\end{DoxyReturn}

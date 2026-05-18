@@ -1,0 +1,21 @@
+\doxysection{cmd.\+h}
+\hypertarget{cmd_8h_source}{}\label{cmd_8h_source}\index{src/parse/cmd/cmd.h@{src/parse/cmd/cmd.h}}
+\mbox{\hyperlink{cmd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CMD\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CMD\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{redirect_8h}{parse/redirect/redirect.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structCmd__t}{Cmd\_t}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{structCmd__t_a742a39a90a2627b201493d3f5858facd}{argv}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structCmd__t_a4906b124507f4cb171d617c783a6a08c}{argc}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{structRedirect__t}{Redirect\_t}}*\ \mbox{\hyperlink{structCmd__t_a9e5d1cb59d3f3dd93822f501a61d48af}{redirs}};\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structCmd__t_a451767aa136a1fe8a74ff807b4f41ca0}{redirCount}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \}\ \mbox{\hyperlink{structCmd__t}{Cmd\_t}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cmd_8h_addcea58f9fbfd61dda06e59ce3a9c905}{applyRedirects}}(\mbox{\hyperlink{structCmd__t}{Cmd\_t}}*\ cmd);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

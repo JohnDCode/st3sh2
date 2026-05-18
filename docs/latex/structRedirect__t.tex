@@ -1,0 +1,59 @@
+\doxysection{Redirect\+\_\+t Struct Reference}
+\hypertarget{structRedirect__t}{}\label{structRedirect__t}\index{Redirect\_t@{Redirect\_t}}
+
+
+Stores the redirect data for a command.  
+
+
+
+
+{\ttfamily \#include $<$redirect.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structRedirect__t_ab114b045cd6a22c7fffb695c084dcb04}{target}}
+\item 
+\mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}} \mbox{\hyperlink{structRedirect__t_a8b22b32e5f6dc0730aaa3f5f1b41de1d}{type}}
+\item 
+int \mbox{\hyperlink{structRedirect__t_aef685ef4f42322308916bb7686c5ba8e}{fd}}
+\item 
+int \mbox{\hyperlink{structRedirect__t_a8bbc0394a2505a67122763e54a0c9c6c}{target\+Fd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores the redirect data for a command. 
+
+Stores the target of the redirect, and the type of redirect to apply. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structRedirect__t_aef685ef4f42322308916bb7686c5ba8e}\label{structRedirect__t_aef685ef4f42322308916bb7686c5ba8e} 
+\index{Redirect\_t@{Redirect\_t}!fd@{fd}}
+\index{fd@{fd}!Redirect\_t@{Redirect\_t}}
+\doxysubsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily int Redirect\+\_\+t\+::fd}
+
+File descriptor from left side of operator. \Hypertarget{structRedirect__t_ab114b045cd6a22c7fffb695c084dcb04}\label{structRedirect__t_ab114b045cd6a22c7fffb695c084dcb04} 
+\index{Redirect\_t@{Redirect\_t}!target@{target}}
+\index{target@{target}!Redirect\_t@{Redirect\_t}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} Redirect\+\_\+t\+::target}
+
+The target of the redirect. \Hypertarget{structRedirect__t_a8bbc0394a2505a67122763e54a0c9c6c}\label{structRedirect__t_a8bbc0394a2505a67122763e54a0c9c6c} 
+\index{Redirect\_t@{Redirect\_t}!targetFd@{targetFd}}
+\index{targetFd@{targetFd}!Redirect\_t@{Redirect\_t}}
+\doxysubsubsection{\texorpdfstring{targetFd}{targetFd}}
+{\footnotesize\ttfamily int Redirect\+\_\+t\+::target\+Fd}
+
+File descriptor from right side of operator. \Hypertarget{structRedirect__t_a8b22b32e5f6dc0730aaa3f5f1b41de1d}\label{structRedirect__t_a8b22b32e5f6dc0730aaa3f5f1b41de1d} 
+\index{Redirect\_t@{Redirect\_t}!type@{type}}
+\index{type@{type}!Redirect\_t@{Redirect\_t}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}} Redirect\+\_\+t\+::type}
+
+The type of redirect operator. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/parse/redirect/\mbox{\hyperlink{redirect_8h}{redirect.\+h}}\end{DoxyCompactItemize}

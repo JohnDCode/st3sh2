@@ -1,0 +1,24 @@
+\doxysection{char\+In.\+h}
+\hypertarget{charIn_8h_source}{}\label{charIn_8h_source}\index{src/parse/charIn/charIn.h@{src/parse/charIn/charIn.h}}
+\mbox{\hyperlink{charIn_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHAR\_IN\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHAR\_IN\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{QuotedStatus\_t}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//QUOTED\_BACK\_SLASH,\ \ \ \ /**<\ Character\ is\ escaped\ with\ a\ backslash.\ */}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88ad0d7655bc3858637284a487626a130fc}{QUOTED\_NONE}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88a7fbdf8f3f4721546b2b83e0f15d12b07}{QUOTED\_SINGLE}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88a5afe8630a187398edc00ba6e251aeea4}{QUOTED\_DOUBLE}}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \}\ \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{QuotedStatus\_t}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structCharIn__t}{CharIn\_t}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structCharIn__t_ab35e48556cdf5982048077f4b0b22ec9}{c}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{QuotedStatus\_t}}\ \mbox{\hyperlink{structCharIn__t_ada21d5ec771a49aee57549e3fed5329c}{quoted}};\ \ }
+\DoxyCodeLine{00027\ \}\ \mbox{\hyperlink{structCharIn__t}{CharIn\_t}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \mbox{\hyperlink{structCharIn__t}{CharIn\_t}}*\ \mbox{\hyperlink{charIn_8h_a762e387bb7a0185e1d1bc05995e5ff15}{createCharIn}}(\textcolor{keywordtype}{char}\ c,\ \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{QuotedStatus\_t}}\ quotedStatus);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

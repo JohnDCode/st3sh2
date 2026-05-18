@@ -1,0 +1,3 @@
+/home/john/st3sh2/build/CMakeFiles/st3sh.dir
+/home/john/st3sh2/build/CMakeFiles/edit_cache.dir
+/home/john/st3sh2/build/CMakeFiles/rebuild_cache.dir

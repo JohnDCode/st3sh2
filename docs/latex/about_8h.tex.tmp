@@ -1,0 +1,35 @@
+\doxysection{src/about/about.h File Reference}
+\hypertarget{about_8h}{}\label{about_8h}\index{src/about/about.h@{src/about/about.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{about_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}{VERSION}}~"{}alpha0.\+1.\+1"{}
+\item 
+\#define \mbox{\hyperlink{about_8h_a6c8fad838ed64cc67da3f68149009758}{AUTHOR}}~"{}John\+David Abe"{}
+\item 
+\#define \mbox{\hyperlink{about_8h_a6da3140ef7ea2f72d02f8edee5558d84}{REPO}}~"{}github.\+com/johndcode/st3sh"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{about_8h_a6c8fad838ed64cc67da3f68149009758}\label{about_8h_a6c8fad838ed64cc67da3f68149009758} 
+\index{about.h@{about.h}!AUTHOR@{AUTHOR}}
+\index{AUTHOR@{AUTHOR}!about.h@{about.h}}
+\doxysubsubsection{\texorpdfstring{AUTHOR}{AUTHOR}}
+{\footnotesize\ttfamily \#define AUTHOR~"{}John\+David Abe"{}}
+
+st3sh repo path. \Hypertarget{about_8h_a6da3140ef7ea2f72d02f8edee5558d84}\label{about_8h_a6da3140ef7ea2f72d02f8edee5558d84} 
+\index{about.h@{about.h}!REPO@{REPO}}
+\index{REPO@{REPO}!about.h@{about.h}}
+\doxysubsubsection{\texorpdfstring{REPO}{REPO}}
+{\footnotesize\ttfamily \#define REPO~"{}github.\+com/johndcode/st3sh"{}}
+
+\Hypertarget{about_8h_a1c6d5de492ac61ad29aec7aa9a436bbf}\label{about_8h_a1c6d5de492ac61ad29aec7aa9a436bbf} 
+\index{about.h@{about.h}!VERSION@{VERSION}}
+\index{VERSION@{VERSION}!about.h@{about.h}}
+\doxysubsubsection{\texorpdfstring{VERSION}{VERSION}}
+{\footnotesize\ttfamily \#define VERSION~"{}alpha0.\+1.\+1"{}}
+
+\texorpdfstring{$<$}{<} st3sh version number. st3sh author. 

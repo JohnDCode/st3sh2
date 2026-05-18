@@ -1,0 +1,63 @@
+\doxysection{Token\+\_\+t Struct Reference}
+\hypertarget{structToken__t}{}\label{structToken__t}\index{Token\_t@{Token\_t}}
+
+
+Stores a single token from user input.  
+
+
+
+
+{\ttfamily \#include $<$token.\+h$>$}
+
+
+
+Collaboration diagram for Token\+\_\+t\+:
+% FIG 0
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structToken__t_ab584efdfb68db7915eeb35a7cd311e25}{chars}}
+\item 
+int \mbox{\hyperlink{structToken__t_ab985a81236b19ef8a40013b03aaa127d}{char\+Count}}
+\item 
+int \mbox{\hyperlink{structToken__t_aa89a617ed5f646a168eae39da0ca39bc}{buff\+Size}}
+\item 
+\mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}} \mbox{\hyperlink{structToken__t_ad49347edf094f6ea46bb0bf53ba05845}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores a single token from user input. 
+
+Stores the actually inputted characters as an array of type \doxylink{structCharIn__t}{Char\+In\+\_\+t} as well as the type of the token using \doxylink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structToken__t_aa89a617ed5f646a168eae39da0ca39bc}\label{structToken__t_aa89a617ed5f646a168eae39da0ca39bc} 
+\index{Token\_t@{Token\_t}!buffSize@{buffSize}}
+\index{buffSize@{buffSize}!Token\_t@{Token\_t}}
+\doxysubsubsection{\texorpdfstring{buffSize}{buffSize}}
+{\footnotesize\ttfamily int Token\+\_\+t\+::buff\+Size}
+
+Current size of buffer for chars array. \Hypertarget{structToken__t_ab985a81236b19ef8a40013b03aaa127d}\label{structToken__t_ab985a81236b19ef8a40013b03aaa127d} 
+\index{Token\_t@{Token\_t}!charCount@{charCount}}
+\index{charCount@{charCount}!Token\_t@{Token\_t}}
+\doxysubsubsection{\texorpdfstring{charCount}{charCount}}
+{\footnotesize\ttfamily int Token\+\_\+t\+::char\+Count}
+
+The number of characters in the token. \Hypertarget{structToken__t_ab584efdfb68db7915eeb35a7cd311e25}\label{structToken__t_ab584efdfb68db7915eeb35a7cd311e25} 
+\index{Token\_t@{Token\_t}!chars@{chars}}
+\index{chars@{chars}!Token\_t@{Token\_t}}
+\doxysubsubsection{\texorpdfstring{chars}{chars}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}}\texorpdfstring{$\ast$}{*} Token\+\_\+t\+::chars}
+
+The list of characters constituting the token. \Hypertarget{structToken__t_ad49347edf094f6ea46bb0bf53ba05845}\label{structToken__t_ad49347edf094f6ea46bb0bf53ba05845} 
+\index{Token\_t@{Token\_t}!type@{type}}
+\index{type@{type}!Token\_t@{Token\_t}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}} Token\+\_\+t\+::type}
+
+The type of token. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/parse/token/\mbox{\hyperlink{token_8h}{token.\+h}}\end{DoxyCompactItemize}

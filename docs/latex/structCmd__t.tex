@@ -1,0 +1,63 @@
+\doxysection{Cmd\+\_\+t Struct Reference}
+\hypertarget{structCmd__t}{}\label{structCmd__t}\index{Cmd\_t@{Cmd\_t}}
+
+
+Stores raw data for a single command.  
+
+
+
+
+{\ttfamily \#include $<$cmd.\+h$>$}
+
+
+
+Collaboration diagram for Cmd\+\_\+t\+:
+% FIG 0
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structCmd__t_a742a39a90a2627b201493d3f5858facd}{argv}}
+\item 
+int \mbox{\hyperlink{structCmd__t_a4906b124507f4cb171d617c783a6a08c}{argc}}
+\item 
+\mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structCmd__t_a9e5d1cb59d3f3dd93822f501a61d48af}{redirs}}
+\item 
+int \mbox{\hyperlink{structCmd__t_a451767aa136a1fe8a74ff807b4f41ca0}{redir\+Count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores raw data for a single command. 
+
+Stores each argument as a list of characters and a list of redirects on this command. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structCmd__t_a4906b124507f4cb171d617c783a6a08c}\label{structCmd__t_a4906b124507f4cb171d617c783a6a08c} 
+\index{Cmd\_t@{Cmd\_t}!argc@{argc}}
+\index{argc@{argc}!Cmd\_t@{Cmd\_t}}
+\doxysubsubsection{\texorpdfstring{argc}{argc}}
+{\footnotesize\ttfamily int Cmd\+\_\+t\+::argc}
+
+The number of arguments in the command. \Hypertarget{structCmd__t_a742a39a90a2627b201493d3f5858facd}\label{structCmd__t_a742a39a90a2627b201493d3f5858facd} 
+\index{Cmd\_t@{Cmd\_t}!argv@{argv}}
+\index{argv@{argv}!Cmd\_t@{Cmd\_t}}
+\doxysubsubsection{\texorpdfstring{argv}{argv}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Cmd\+\_\+t\+::argv}
+
+The arguments comprising the command. \Hypertarget{structCmd__t_a451767aa136a1fe8a74ff807b4f41ca0}\label{structCmd__t_a451767aa136a1fe8a74ff807b4f41ca0} 
+\index{Cmd\_t@{Cmd\_t}!redirCount@{redirCount}}
+\index{redirCount@{redirCount}!Cmd\_t@{Cmd\_t}}
+\doxysubsubsection{\texorpdfstring{redirCount}{redirCount}}
+{\footnotesize\ttfamily int Cmd\+\_\+t\+::redir\+Count}
+
+The type of the redirect. \Hypertarget{structCmd__t_a9e5d1cb59d3f3dd93822f501a61d48af}\label{structCmd__t_a9e5d1cb59d3f3dd93822f501a61d48af} 
+\index{Cmd\_t@{Cmd\_t}!redirs@{redirs}}
+\index{redirs@{redirs}!Cmd\_t@{Cmd\_t}}
+\doxysubsubsection{\texorpdfstring{redirs}{redirs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}}\texorpdfstring{$\ast$}{*} Cmd\+\_\+t\+::redirs}
+
+List of redirects to perform on this command. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/parse/cmd/\mbox{\hyperlink{cmd_8h}{cmd.\+h}}\end{DoxyCompactItemize}

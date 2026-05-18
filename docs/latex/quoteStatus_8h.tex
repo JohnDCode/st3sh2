@@ -1,0 +1,60 @@
+\doxysection{src/parse/quote\+Status/quote\+Status.h File Reference}
+\hypertarget{quoteStatus_8h}{}\label{quoteStatus_8h}\index{src/parse/quoteStatus/quoteStatus.h@{src/parse/quoteStatus/quoteStatus.h}}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5}{Quote\+Status}} \mbox{\hyperlink{quoteStatus_8h_a2d795a526dfb33122ae21e82a18c5648}{Quote\+Status}}
+\begin{DoxyCompactList}\small\item\em Stores if a character from user input is within a quoted region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5}{Quote\+Status}} \{ \mbox{\hyperlink{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5a2dbe324cef1165dadb4b0e887ff25304}{BACK\+\_\+\+SLASH}}
+, \mbox{\hyperlink{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5a33465d1d419b1074fb259ef444609e92}{DOUBLE}}
+, \mbox{\hyperlink{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5a3388f7110f6f25a54e215eb75d5d7516}{SINGLE}}
+, \mbox{\hyperlink{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Stores if a character from user input is within a quoted region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{quoteStatus_8h_a2d795a526dfb33122ae21e82a18c5648}\label{quoteStatus_8h_a2d795a526dfb33122ae21e82a18c5648} 
+\index{quoteStatus.h@{quoteStatus.h}!QuoteStatus@{QuoteStatus}}
+\index{QuoteStatus@{QuoteStatus}!quoteStatus.h@{quoteStatus.h}}
+\doxysubsubsection{\texorpdfstring{QuoteStatus}{QuoteStatus}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5}{Quote\+Status}} \mbox{\hyperlink{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5}{Quote\+Status}}}
+
+
+
+Stores if a character from user input is within a quoted region. 
+
+Stores if a character is part of a double or single quoted region, or if it is escaped by a backslash. Character is parsed into commands differently based on each. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5}\label{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5} 
+\index{quoteStatus.h@{quoteStatus.h}!QuoteStatus@{QuoteStatus}}
+\index{QuoteStatus@{QuoteStatus}!quoteStatus.h@{quoteStatus.h}}
+\doxysubsubsection{\texorpdfstring{QuoteStatus}{QuoteStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5}{Quote\+Status}}}
+
+
+
+Stores if a character from user input is within a quoted region. 
+
+Stores if a character is part of a double or single quoted region, or if it is escaped by a backslash. Character is parsed into commands differently based on each. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACK\_SLASH@{BACK\_SLASH}!quoteStatus.h@{quoteStatus.h}}\index{quoteStatus.h@{quoteStatus.h}!BACK\_SLASH@{BACK\_SLASH}}}\Hypertarget{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5a2dbe324cef1165dadb4b0e887ff25304}\label{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5a2dbe324cef1165dadb4b0e887ff25304} 
+BACK\+\_\+\+SLASH&Character is escaped with a backslash \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOUBLE@{DOUBLE}!quoteStatus.h@{quoteStatus.h}}\index{quoteStatus.h@{quoteStatus.h}!DOUBLE@{DOUBLE}}}\Hypertarget{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5a33465d1d419b1074fb259ef444609e92}\label{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5a33465d1d419b1074fb259ef444609e92} 
+DOUBLE&Character is within a double quoted region \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SINGLE@{SINGLE}!quoteStatus.h@{quoteStatus.h}}\index{quoteStatus.h@{quoteStatus.h}!SINGLE@{SINGLE}}}\Hypertarget{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5a3388f7110f6f25a54e215eb75d5d7516}\label{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5a3388f7110f6f25a54e215eb75d5d7516} 
+SINGLE&Character is within a single quoted region \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!quoteStatus.h@{quoteStatus.h}}\index{quoteStatus.h@{quoteStatus.h}!NONE@{NONE}}}\Hypertarget{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5ac157bdf0b85a40d2619cbc8bc1ae5fe2}\label{quoteStatus_8h_a3c3b255a773ee1cbb3c91d2fdd8d2da5ac157bdf0b85a40d2619cbc8bc1ae5fe2} 
+NONE&Character is not within a quoted region \\
+\hline
+
+\end{DoxyEnumFields}

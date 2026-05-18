@@ -1,0 +1,29 @@
+\doxysection{builtin.\+h}
+\hypertarget{builtin_8h_source}{}\label{builtin_8h_source}\index{src/exec/builtin/builtin.h@{src/exec/builtin/builtin.h}}
+\mbox{\hyperlink{builtin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BUILTIN\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BUILTIN\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cmd_8h}{parse/cmd/cmd.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ int\ (*\mbox{\hyperlink{builtin_8h_ab9bd8e8afef5980899bbb7c9d3d1f7f6}{builtinFunc}})(\mbox{\hyperlink{structCmd__t}{Cmd\_t}}*);}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structbuiltinCmd_a19d95305fb3d0df1573635e00069858d}{name}};\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structbuiltinCmd_a6d550d6997b50e159e5e3393970a910b}{description}};\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{builtin_8h_ab9bd8e8afef5980899bbb7c9d3d1f7f6}{builtinFunc}}\ \mbox{\hyperlink{structbuiltinCmd_a7fb1a5e3546f20d365ce67f28e1744f4}{callback}};\ }
+\DoxyCodeLine{00016\ \}\ \mbox{\hyperlink{structbuiltinCmd}{builtinCmd}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{builtin_8h_a7f7f2a521282aa02786ffcfa65c05ed3}{isBuiltin}}(\mbox{\hyperlink{structCmd__t}{Cmd\_t}}*\ cmd);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{builtin_8h_a11fa939067f693edee5cd2eed574b602}{execBuiltin}}(\mbox{\hyperlink{structCmd__t}{Cmd\_t}}*\ cmd);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{builtin_8h_a2fd9b129bd9890d06a4a0e04d180a2b8}{aboutCmd}}(\mbox{\hyperlink{structCmd__t}{Cmd\_t}}*\ cmd);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{builtin_8h_a37467d40ec2f2496ce64ae669965d6dc}{cdCmd}}(\mbox{\hyperlink{structCmd__t}{Cmd\_t}}*\ cmd);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{builtin_8h_a620cfdc7b0ab1b13a0347635c0402fd1}{exitCmd}}(\mbox{\hyperlink{structCmd__t}{Cmd\_t}}*\ cmd);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{builtin_8h_a4b8caefdbaad01da4b976decacf50e37}{helpCmd}}(\mbox{\hyperlink{structCmd__t}{Cmd\_t}}*\ cmd);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{builtin_8h_aaa5dbccfb8101c34cd1839e2b644c51b}{versionCmd}}(\mbox{\hyperlink{structCmd__t}{Cmd\_t}}*\ cmd);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

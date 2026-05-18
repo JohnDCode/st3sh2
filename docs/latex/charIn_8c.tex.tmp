@@ -1,0 +1,105 @@
+\doxysection{src/parse/char\+In/char\+In.c File Reference}
+\hypertarget{charIn_8c}{}\label{charIn_8c}\index{src/parse/charIn/charIn.c@{src/parse/charIn/charIn.c}}
+{\ttfamily \#include "{}parse/char\+In/char\+In.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for char\+In.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{charIn_8c_a762e387bb7a0185e1d1bc05995e5ff15}{create\+Char\+In}} (char c, \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}} quoted\+Status)
+\begin{DoxyCompactList}\small\item\em Constructs and returns a new \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{charIn_8c_a088713644a88c203310497f1d852f13b}{get\+Char}} (\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*}char\+In)
+\begin{DoxyCompactList}\small\item\em Get the character from a \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}} \mbox{\hyperlink{charIn_8c_a99b0f32cf7b7ce60a8a594d46c0d4597}{get\+Quoted}} (\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*}char\+In)
+\begin{DoxyCompactList}\small\item\em Get the quoted block status from a \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{charIn_8c_ad56947b57feec8848d5de8bbc5f91bab}{set\+Quoted}} (\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*}char\+In, \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}} quoted\+Status)
+\begin{DoxyCompactList}\small\item\em Set the quoted block status for a \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{charIn_8c_a762e387bb7a0185e1d1bc05995e5ff15}\label{charIn_8c_a762e387bb7a0185e1d1bc05995e5ff15} 
+\index{charIn.c@{charIn.c}!createCharIn@{createCharIn}}
+\index{createCharIn@{createCharIn}!charIn.c@{charIn.c}}
+\doxysubsubsection{\texorpdfstring{createCharIn()}{createCharIn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*} create\+Char\+In (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{\mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}}}]{quoted\+Status }\end{DoxyParamCaption})}
+
+
+
+Constructs and returns a new \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & User inputted character. \\
+\hline
+\mbox{\texttt{ in}}  & {\em quoted\+Status} & Quote block character is within.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constructed \doxylink{structCharIn__t}{Char\+In\+\_\+t} object.
+\end{DoxyReturn}
+Dynamically allocates a new \doxylink{structCharIn__t}{Char\+In\+\_\+t} object with a character and quote block. Returns pointer to the constructed object.
+
+\begin{DoxyNote}{Note}
+Returns null on memory allocation fail. 
+\end{DoxyNote}
+\Hypertarget{charIn_8c_a088713644a88c203310497f1d852f13b}\label{charIn_8c_a088713644a88c203310497f1d852f13b} 
+\index{charIn.c@{charIn.c}!getChar@{getChar}}
+\index{getChar@{getChar}!charIn.c@{charIn.c}}
+\doxysubsubsection{\texorpdfstring{getChar()}{getChar()}}
+{\footnotesize\ttfamily char get\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{char\+In }\end{DoxyParamCaption})}
+
+
+
+Get the character from a \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char\+In} & The \doxylink{structCharIn__t}{Char\+In\+\_\+t} to query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User inputted character from @char\+In.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns null terminator if @char\+In is null. 
+\end{DoxyNote}
+\Hypertarget{charIn_8c_a99b0f32cf7b7ce60a8a594d46c0d4597}\label{charIn_8c_a99b0f32cf7b7ce60a8a594d46c0d4597} 
+\index{charIn.c@{charIn.c}!getQuoted@{getQuoted}}
+\index{getQuoted@{getQuoted}!charIn.c@{charIn.c}}
+\doxysubsubsection{\texorpdfstring{getQuoted()}{getQuoted()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}} get\+Quoted (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{char\+In }\end{DoxyParamCaption})}
+
+
+
+Get the quoted block status from a \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char\+In} & The \doxylink{structCharIn__t}{Char\+In\+\_\+t} to query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Quoted block status from @char\+In.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns -\/1 if @char\+In is null. 
+\end{DoxyNote}
+\Hypertarget{charIn_8c_ad56947b57feec8848d5de8bbc5f91bab}\label{charIn_8c_ad56947b57feec8848d5de8bbc5f91bab} 
+\index{charIn.c@{charIn.c}!setQuoted@{setQuoted}}
+\index{setQuoted@{setQuoted}!charIn.c@{charIn.c}}
+\doxysubsubsection{\texorpdfstring{setQuoted()}{setQuoted()}}
+{\footnotesize\ttfamily void set\+Quoted (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{char\+In,  }\item[{\mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}}}]{quoted\+Status }\end{DoxyParamCaption})}
+
+
+
+Set the quoted block status for a \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char\+In} & The \doxylink{structCharIn__t}{Char\+In\+\_\+t} to modify. \\
+\hline
+\mbox{\texttt{ in}}  & {\em quoted\+Status} & Quoted status to populate @char\+In with. \\
+\hline
+\end{DoxyParams}

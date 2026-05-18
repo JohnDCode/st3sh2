@@ -1,0 +1,17 @@
+To Do:
+
+
+Features:
+
+- Commands subsitution / subshell grouping
+- Control flow / basic scripting
+- background procs
+- variable & tilde expansion
+
+
+Also cleanup second parse pass code, very messy.
+Recursive first pass
+Printing status codes on exit
+Pty, escape characters in pty
+
+*/

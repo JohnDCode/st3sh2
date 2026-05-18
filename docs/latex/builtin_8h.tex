@@ -1,0 +1,88 @@
+\doxysection{src/exec/builtin/builtin.h File Reference}
+\hypertarget{builtin_8h}{}\label{builtin_8h}\index{src/exec/builtin/builtin.h@{src/exec/builtin/builtin.h}}
+{\ttfamily \#include "{}parse/cmd/cmd.\+h"{}}\newline
+Include dependency graph for builtin.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbuiltinCmd}{builtin\+Cmd}}
+\begin{DoxyCompactList}\small\item\em Struct for all builtin commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{builtin_8h_ab9bd8e8afef5980899bbb7c9d3d1f7f6}{builtin\+Func}}) (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{builtin_8h_a7f7f2a521282aa02786ffcfa65c05ed3}{is\+Builtin}} (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}cmd)
+\item 
+int \mbox{\hyperlink{builtin_8h_a11fa939067f693edee5cd2eed574b602}{exec\+Builtin}} (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}cmd)
+\item 
+int \mbox{\hyperlink{builtin_8h_a2fd9b129bd9890d06a4a0e04d180a2b8}{about\+Cmd}} (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}cmd)
+\item 
+int \mbox{\hyperlink{builtin_8h_a37467d40ec2f2496ce64ae669965d6dc}{cd\+Cmd}} (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}cmd)
+\item 
+int \mbox{\hyperlink{builtin_8h_a620cfdc7b0ab1b13a0347635c0402fd1}{exit\+Cmd}} (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}cmd)
+\item 
+int \mbox{\hyperlink{builtin_8h_a4b8caefdbaad01da4b976decacf50e37}{help\+Cmd}} (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}cmd)
+\item 
+int \mbox{\hyperlink{builtin_8h_aaa5dbccfb8101c34cd1839e2b644c51b}{version\+Cmd}} (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}cmd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{builtin_8h_ab9bd8e8afef5980899bbb7c9d3d1f7f6}\label{builtin_8h_ab9bd8e8afef5980899bbb7c9d3d1f7f6} 
+\index{builtin.h@{builtin.h}!builtinFunc@{builtinFunc}}
+\index{builtinFunc@{builtinFunc}!builtin.h@{builtin.h}}
+\doxysubsubsection{\texorpdfstring{builtinFunc}{builtinFunc}}
+{\footnotesize\ttfamily typedef int(\texorpdfstring{$\ast$}{*} builtin\+Func) (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*})}
+
+Function pointer for all builtin commands. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{builtin_8h_a2fd9b129bd9890d06a4a0e04d180a2b8}\label{builtin_8h_a2fd9b129bd9890d06a4a0e04d180a2b8} 
+\index{builtin.h@{builtin.h}!aboutCmd@{aboutCmd}}
+\index{aboutCmd@{aboutCmd}!builtin.h@{builtin.h}}
+\doxysubsubsection{\texorpdfstring{aboutCmd()}{aboutCmd()}}
+{\footnotesize\ttfamily int about\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+
+\Hypertarget{builtin_8h_a37467d40ec2f2496ce64ae669965d6dc}\label{builtin_8h_a37467d40ec2f2496ce64ae669965d6dc} 
+\index{builtin.h@{builtin.h}!cdCmd@{cdCmd}}
+\index{cdCmd@{cdCmd}!builtin.h@{builtin.h}}
+\doxysubsubsection{\texorpdfstring{cdCmd()}{cdCmd()}}
+{\footnotesize\ttfamily int cd\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+
+\Hypertarget{builtin_8h_a11fa939067f693edee5cd2eed574b602}\label{builtin_8h_a11fa939067f693edee5cd2eed574b602} 
+\index{builtin.h@{builtin.h}!execBuiltin@{execBuiltin}}
+\index{execBuiltin@{execBuiltin}!builtin.h@{builtin.h}}
+\doxysubsubsection{\texorpdfstring{execBuiltin()}{execBuiltin()}}
+{\footnotesize\ttfamily int exec\+Builtin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+
+\Hypertarget{builtin_8h_a620cfdc7b0ab1b13a0347635c0402fd1}\label{builtin_8h_a620cfdc7b0ab1b13a0347635c0402fd1} 
+\index{builtin.h@{builtin.h}!exitCmd@{exitCmd}}
+\index{exitCmd@{exitCmd}!builtin.h@{builtin.h}}
+\doxysubsubsection{\texorpdfstring{exitCmd()}{exitCmd()}}
+{\footnotesize\ttfamily int exit\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+
+\Hypertarget{builtin_8h_a4b8caefdbaad01da4b976decacf50e37}\label{builtin_8h_a4b8caefdbaad01da4b976decacf50e37} 
+\index{builtin.h@{builtin.h}!helpCmd@{helpCmd}}
+\index{helpCmd@{helpCmd}!builtin.h@{builtin.h}}
+\doxysubsubsection{\texorpdfstring{helpCmd()}{helpCmd()}}
+{\footnotesize\ttfamily int help\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+
+\Hypertarget{builtin_8h_a7f7f2a521282aa02786ffcfa65c05ed3}\label{builtin_8h_a7f7f2a521282aa02786ffcfa65c05ed3} 
+\index{builtin.h@{builtin.h}!isBuiltin@{isBuiltin}}
+\index{isBuiltin@{isBuiltin}!builtin.h@{builtin.h}}
+\doxysubsubsection{\texorpdfstring{isBuiltin()}{isBuiltin()}}
+{\footnotesize\ttfamily int is\+Builtin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+
+\Hypertarget{builtin_8h_aaa5dbccfb8101c34cd1839e2b644c51b}\label{builtin_8h_aaa5dbccfb8101c34cd1839e2b644c51b} 
+\index{builtin.h@{builtin.h}!versionCmd@{versionCmd}}
+\index{versionCmd@{versionCmd}!builtin.h@{builtin.h}}
+\doxysubsubsection{\texorpdfstring{versionCmd()}{versionCmd()}}
+{\footnotesize\ttfamily int version\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+

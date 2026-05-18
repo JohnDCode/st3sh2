@@ -1,0 +1,103 @@
+\doxysection{src/parse/char\+In/char\+In.h File Reference}
+\hypertarget{charIn_8h}{}\label{charIn_8h}\index{src/parse/charIn/charIn.h@{src/parse/charIn/charIn.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores a single character from user input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}} \mbox{\hyperlink{charIn_8h_ab49be044fca5c5f23451e1e85a5063fc}{Quoted\+Status\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores if a character is within a quoted region. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \mbox{\hyperlink{charIn_8h_a2d96c12eb369190f6d3e9825c3f30b83}{Char\+In\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores a single character from user input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}} \{ \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88ad0d7655bc3858637284a487626a130fc}{QUOTED\+\_\+\+NONE}}
+, \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88a7fbdf8f3f4721546b2b83e0f15d12b07}{QUOTED\+\_\+\+SINGLE}}
+, \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88a5afe8630a187398edc00ba6e251aeea4}{QUOTED\+\_\+\+DOUBLE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Stores if a character is within a quoted region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{charIn_8h_a762e387bb7a0185e1d1bc05995e5ff15}{create\+Char\+In}} (char c, \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}} quoted\+Status)
+\begin{DoxyCompactList}\small\item\em Constructs and returns a new \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{charIn_8h_a2d96c12eb369190f6d3e9825c3f30b83}\label{charIn_8h_a2d96c12eb369190f6d3e9825c3f30b83} 
+\index{charIn.h@{charIn.h}!CharIn\_t@{CharIn\_t}}
+\index{CharIn\_t@{CharIn\_t}!charIn.h@{charIn.h}}
+\doxysubsubsection{\texorpdfstring{CharIn\_t}{CharIn\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}}}
+
+
+
+Stores a single character from user input. 
+
+Stores the actually inputted character, as well as the status of the character relative to other quoted blocks using \doxylink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}. \Hypertarget{charIn_8h_ab49be044fca5c5f23451e1e85a5063fc}\label{charIn_8h_ab49be044fca5c5f23451e1e85a5063fc} 
+\index{charIn.h@{charIn.h}!QuotedStatus\_t@{QuotedStatus\_t}}
+\index{QuotedStatus\_t@{QuotedStatus\_t}!charIn.h@{charIn.h}}
+\doxysubsubsection{\texorpdfstring{QuotedStatus\_t}{QuotedStatus\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}} \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}}}
+
+
+
+Stores if a character is within a quoted region. 
+
+Stores if a character is part of a double or single quoted region, or if it is escaped by a backslash. Character is parsed into commands differently based on such status. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{charIn_8h_a50130f014a74c80e743c608cfc9ced88}\label{charIn_8h_a50130f014a74c80e743c608cfc9ced88} 
+\index{charIn.h@{charIn.h}!QuotedStatus\_t@{QuotedStatus\_t}}
+\index{QuotedStatus\_t@{QuotedStatus\_t}!charIn.h@{charIn.h}}
+\doxysubsubsection{\texorpdfstring{QuotedStatus\_t}{QuotedStatus\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}}}
+
+
+
+Stores if a character is within a quoted region. 
+
+Stores if a character is part of a double or single quoted region, or if it is escaped by a backslash. Character is parsed into commands differently based on such status. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUOTED\_NONE@{QUOTED\_NONE}!charIn.h@{charIn.h}}\index{charIn.h@{charIn.h}!QUOTED\_NONE@{QUOTED\_NONE}}}\Hypertarget{charIn_8h_a50130f014a74c80e743c608cfc9ced88ad0d7655bc3858637284a487626a130fc}\label{charIn_8h_a50130f014a74c80e743c608cfc9ced88ad0d7655bc3858637284a487626a130fc} 
+QUOTED\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUOTED\_SINGLE@{QUOTED\_SINGLE}!charIn.h@{charIn.h}}\index{charIn.h@{charIn.h}!QUOTED\_SINGLE@{QUOTED\_SINGLE}}}\Hypertarget{charIn_8h_a50130f014a74c80e743c608cfc9ced88a7fbdf8f3f4721546b2b83e0f15d12b07}\label{charIn_8h_a50130f014a74c80e743c608cfc9ced88a7fbdf8f3f4721546b2b83e0f15d12b07} 
+QUOTED\+\_\+\+SINGLE&\texorpdfstring{$<$}{<}Character is not within a quoted region. Character is within a double quoted region. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUOTED\_DOUBLE@{QUOTED\_DOUBLE}!charIn.h@{charIn.h}}\index{charIn.h@{charIn.h}!QUOTED\_DOUBLE@{QUOTED\_DOUBLE}}}\Hypertarget{charIn_8h_a50130f014a74c80e743c608cfc9ced88a5afe8630a187398edc00ba6e251aeea4}\label{charIn_8h_a50130f014a74c80e743c608cfc9ced88a5afe8630a187398edc00ba6e251aeea4} 
+QUOTED\+\_\+\+DOUBLE&Character is within a single quoted region. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{charIn_8h_a762e387bb7a0185e1d1bc05995e5ff15}\label{charIn_8h_a762e387bb7a0185e1d1bc05995e5ff15} 
+\index{charIn.h@{charIn.h}!createCharIn@{createCharIn}}
+\index{createCharIn@{createCharIn}!charIn.h@{charIn.h}}
+\doxysubsubsection{\texorpdfstring{createCharIn()}{createCharIn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCharIn__t}{Char\+In\+\_\+t}} \texorpdfstring{$\ast$}{*} create\+Char\+In (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{\mbox{\hyperlink{charIn_8h_a50130f014a74c80e743c608cfc9ced88}{Quoted\+Status\+\_\+t}}}]{quoted\+Status }\end{DoxyParamCaption})}
+
+
+
+Constructs and returns a new \doxylink{structCharIn__t}{Char\+In\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & User inputted character. \\
+\hline
+\mbox{\texttt{ in}}  & {\em quoted\+Status} & Quote block character is within.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constructed \doxylink{structCharIn__t}{Char\+In\+\_\+t} object.
+\end{DoxyReturn}
+Dynamically allocates a new \doxylink{structCharIn__t}{Char\+In\+\_\+t} object with a character and quote block. Returns pointer to the constructed object. 

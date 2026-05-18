@@ -1,0 +1,80 @@
+\doxysection{src/exec/exec.c File Reference}
+\hypertarget{exec_8c}{}\label{exec_8c}\index{src/exec/exec.c@{src/exec/exec.c}}
+{\ttfamily \#include "{}exec/exec.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include "{}exec/builtin/builtin.\+h"{}}\newline
+{\ttfamily \#include "{}parse/redirect/redirect.\+h"{}}\newline
+{\ttfamily \#include "{}parse/token/token.\+h"{}}\newline
+{\ttfamily \#include "{}parse/cmd/cmd.\+h"{}}\newline
+Include dependency graph for exec.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{exec_8c_ade5f6c6a21d018e51afa12a30504ab15}{exec\+Cmd}} (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}cmd)
+\begin{DoxyCompactList}\small\item\em Naivley executes a single, individual command. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{exec_8c_a00df3977b29da4a3a67659a569044d1a}{exec\+Pipeline}} (\mbox{\hyperlink{structPipeline__t}{Pipeline\+\_\+t}} \texorpdfstring{$\ast$}{*}pipeline)
+\begin{DoxyCompactList}\small\item\em Executes an entire pipeline (group of commands). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{exec_8c_aaee875bcb062abeb6ca585dce738b240}{exec\+Separator}} (\mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}} \texorpdfstring{$\ast$}{*}separator)
+\begin{DoxyCompactList}\small\item\em Executes a separator as a group of pipelines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{exec_8c_ade5f6c6a21d018e51afa12a30504ab15}\label{exec_8c_ade5f6c6a21d018e51afa12a30504ab15} 
+\index{exec.c@{exec.c}!execCmd@{execCmd}}
+\index{execCmd@{execCmd}!exec.c@{exec.c}}
+\doxysubsubsection{\texorpdfstring{execCmd()}{execCmd()}}
+{\footnotesize\ttfamily int exec\+Cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Naivley executes a single, individual command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cmd} & The command object to execute.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exit status of the executed command. 
+\end{DoxyReturn}
+\Hypertarget{exec_8c_a00df3977b29da4a3a67659a569044d1a}\label{exec_8c_a00df3977b29da4a3a67659a569044d1a} 
+\index{exec.c@{exec.c}!execPipeline@{execPipeline}}
+\index{execPipeline@{execPipeline}!exec.c@{exec.c}}
+\doxysubsubsection{\texorpdfstring{execPipeline()}{execPipeline()}}
+{\footnotesize\ttfamily int exec\+Pipeline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPipeline__t}{Pipeline\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{pipeline }\end{DoxyParamCaption})}
+
+
+
+Executes an entire pipeline (group of commands). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pipeline} & The pipeline object to execute.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exit status of the last command executed. 
+\end{DoxyReturn}
+\Hypertarget{exec_8c_aaee875bcb062abeb6ca585dce738b240}\label{exec_8c_aaee875bcb062abeb6ca585dce738b240} 
+\index{exec.c@{exec.c}!execSeparator@{execSeparator}}
+\index{execSeparator@{execSeparator}!exec.c@{exec.c}}
+\doxysubsubsection{\texorpdfstring{execSeparator()}{execSeparator()}}
+{\footnotesize\ttfamily int exec\+Separator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{separator }\end{DoxyParamCaption})}
+
+
+
+Executes a separator as a group of pipelines. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em separator} & The separator object to execute.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exit status of the last command in the last pipeline. 
+\end{DoxyReturn}

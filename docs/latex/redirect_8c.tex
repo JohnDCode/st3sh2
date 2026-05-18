@@ -1,0 +1,39 @@
+\doxysection{src/parse/redirect/redirect.c File Reference}
+\hypertarget{redirect_8c}{}\label{redirect_8c}\index{src/parse/redirect/redirect.c@{src/parse/redirect/redirect.c}}
+{\ttfamily \#include "{}parse/redirect/redirect.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include "{}parse/token/token.\+h"{}}\newline
+Include dependency graph for redirect.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{redirect_8c_ab836ff876c364b6ff7d9e96d8595d1f6}{create\+Redirect}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, \mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}target\+Token)
+\begin{DoxyCompactList}\small\item\em Constructs and returns a new \doxylink{structRedirect__t}{Redirect\+\_\+t} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{redirect_8c_ab836ff876c364b6ff7d9e96d8595d1f6}\label{redirect_8c_ab836ff876c364b6ff7d9e96d8595d1f6} 
+\index{redirect.c@{redirect.c}!createRedirect@{createRedirect}}
+\index{createRedirect@{createRedirect}!redirect.c@{redirect.c}}
+\doxysubsubsection{\texorpdfstring{createRedirect()}{createRedirect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}} \texorpdfstring{$\ast$}{*} create\+Redirect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{target\+Token }\end{DoxyParamCaption})}
+
+
+
+Constructs and returns a new \doxylink{structRedirect__t}{Redirect\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The token op object to consturct the redirect from. \\
+\hline
+\mbox{\texttt{ in}}  & {\em target\+Token} & The next token in the sequence representing target.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constructed \doxylink{structRedirect__t}{Redirect\+\_\+t} object.
+\end{DoxyReturn}
+Dynamically allocates a new \doxylink{structRedirect__t}{Redirect\+\_\+t} object with a target and operator. Returns pointer to the constructed object. Extracts data from the characters within two consecutivley tokens and sets all fields accordingly. 

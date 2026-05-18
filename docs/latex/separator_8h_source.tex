@@ -1,0 +1,22 @@
+\doxysection{separator.\+h}
+\hypertarget{separator_8h_source}{}\label{separator_8h_source}\index{src/parse/separator/separator.h@{src/parse/separator/separator.h}}
+\mbox{\hyperlink{separator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SEPARATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SEPARATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pipeline_8h}{parse/pipeline/pipeline.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{token_8h}{parse/token/token.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSeparator__t}{Separator\_t}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{structPipeline__t}{Pipeline\_t}}*\ \mbox{\hyperlink{structSeparator__t_ad160e25e6483c7041a723d6c92138cfe}{pipes}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSeparator__t_a745db4120dca505148d07319afc9e286}{pipeCount}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{TokenType\_t}}*\ \mbox{\hyperlink{structSeparator__t_a4c5e7f054d90d28aca8630210b533380}{operators}};\ }
+\DoxyCodeLine{00015\ \}\ \mbox{\hyperlink{structSeparator__t}{Separator\_t}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \mbox{\hyperlink{structSeparator__t}{Separator\_t}}*\ \mbox{\hyperlink{separator_8h_a36585e33a9700792efc865a598a9b840}{constructCommands}}(\mbox{\hyperlink{structToken__t}{Token\_t}}*\ tokens,\ \textcolor{keywordtype}{int}\ numTokens,\ \textcolor{keywordtype}{int}*\ listLen);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{separator_8h_ac6e8a3d1b45819833c52d654bab23a7f}{freeSeparator}}(\mbox{\hyperlink{structSeparator__t}{Separator\_t}}*\ sep,\ \textcolor{keywordtype}{int}\ sepLen);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

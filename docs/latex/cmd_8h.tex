@@ -1,0 +1,44 @@
+\doxysection{src/parse/cmd/cmd.h File Reference}
+\hypertarget{cmd_8h}{}\label{cmd_8h}\index{src/parse/cmd/cmd.h@{src/parse/cmd/cmd.h}}
+{\ttfamily \#include "{}parse/redirect/redirect.\+h"{}}\newline
+Include dependency graph for cmd.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores raw data for a single command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \mbox{\hyperlink{cmd_8h_a3c32dc209b1682ac6df650deb27b2127}{Cmd\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores raw data for a single command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cmd_8h_addcea58f9fbfd61dda06e59ce3a9c905}{apply\+Redirects}} (\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}cmd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{cmd_8h_a3c32dc209b1682ac6df650deb27b2127}\label{cmd_8h_a3c32dc209b1682ac6df650deb27b2127} 
+\index{cmd.h@{cmd.h}!Cmd\_t@{Cmd\_t}}
+\index{Cmd\_t@{Cmd\_t}!cmd.h@{cmd.h}}
+\doxysubsubsection{\texorpdfstring{Cmd\_t}{Cmd\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}}}
+
+
+
+Stores raw data for a single command. 
+
+Stores each argument as a list of characters and a list of redirects on this command. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{cmd_8h_addcea58f9fbfd61dda06e59ce3a9c905}\label{cmd_8h_addcea58f9fbfd61dda06e59ce3a9c905} 
+\index{cmd.h@{cmd.h}!applyRedirects@{applyRedirects}}
+\index{applyRedirects@{applyRedirects}!cmd.h@{cmd.h}}
+\doxysubsubsection{\texorpdfstring{applyRedirects()}{applyRedirects()}}
+{\footnotesize\ttfamily void apply\+Redirects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCmd__t}{Cmd\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{cmd }\end{DoxyParamCaption})}
+

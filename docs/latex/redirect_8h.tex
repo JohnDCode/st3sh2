@@ -1,0 +1,59 @@
+\doxysection{src/parse/redirect/redirect.h File Reference}
+\hypertarget{redirect_8h}{}\label{redirect_8h}\index{src/parse/redirect/redirect.h@{src/parse/redirect/redirect.h}}
+{\ttfamily \#include "{}parse/token/token.\+h"{}}\newline
+Include dependency graph for redirect.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores the redirect data for a command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}} \mbox{\hyperlink{redirect_8h_ac90a04a121955a924412c9631bdc72ca}{Redirect\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores the redirect data for a command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{redirect_8h_ab836ff876c364b6ff7d9e96d8595d1f6}{create\+Redirect}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, \mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}target\+Token)
+\begin{DoxyCompactList}\small\item\em Constructs and returns a new \doxylink{structRedirect__t}{Redirect\+\_\+t} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{redirect_8h_ac90a04a121955a924412c9631bdc72ca}\label{redirect_8h_ac90a04a121955a924412c9631bdc72ca} 
+\index{redirect.h@{redirect.h}!Redirect\_t@{Redirect\_t}}
+\index{Redirect\_t@{Redirect\_t}!redirect.h@{redirect.h}}
+\doxysubsubsection{\texorpdfstring{Redirect\_t}{Redirect\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}} \mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}}}
+
+
+
+Stores the redirect data for a command. 
+
+Stores the target of the redirect, and the type of redirect to apply. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{redirect_8h_ab836ff876c364b6ff7d9e96d8595d1f6}\label{redirect_8h_ab836ff876c364b6ff7d9e96d8595d1f6} 
+\index{redirect.h@{redirect.h}!createRedirect@{createRedirect}}
+\index{createRedirect@{createRedirect}!redirect.h@{redirect.h}}
+\doxysubsubsection{\texorpdfstring{createRedirect()}{createRedirect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRedirect__t}{Redirect\+\_\+t}} \texorpdfstring{$\ast$}{*} create\+Redirect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{target\+Token }\end{DoxyParamCaption})}
+
+
+
+Constructs and returns a new \doxylink{structRedirect__t}{Redirect\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The token op object to consturct the redirect from. \\
+\hline
+\mbox{\texttt{ in}}  & {\em target\+Token} & The next token in the sequence representing target.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constructed \doxylink{structRedirect__t}{Redirect\+\_\+t} object.
+\end{DoxyReturn}
+Dynamically allocates a new \doxylink{structRedirect__t}{Redirect\+\_\+t} object with a target and operator. Returns pointer to the constructed object. Extracts data from the characters within two consecutivley tokens and sets all fields accordingly. 

@@ -1,0 +1,53 @@
+\doxysection{src/parse/separator/separator.h File Reference}
+\hypertarget{separator_8h}{}\label{separator_8h}\index{src/parse/separator/separator.h@{src/parse/separator/separator.h}}
+{\ttfamily \#include "{}parse/pipeline/pipeline.\+h"{}}\newline
+{\ttfamily \#include "{}parse/token/token.\+h"{}}\newline
+Include dependency graph for separator.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores command data for a group of pipes that are separated by operators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}} \mbox{\hyperlink{separator_8h_a7ba232adf43795d073f7873455b6f90a}{Separator\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores command data for a group of pipes that are separated by operators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{separator_8h_a36585e33a9700792efc865a598a9b840}{construct\+Commands}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}tokens, int num\+Tokens, int \texorpdfstring{$\ast$}{*}list\+Len)
+\item 
+void \mbox{\hyperlink{separator_8h_ac6e8a3d1b45819833c52d654bab23a7f}{free\+Separator}} (\mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}} \texorpdfstring{$\ast$}{*}sep, int sep\+Len)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{separator_8h_a7ba232adf43795d073f7873455b6f90a}\label{separator_8h_a7ba232adf43795d073f7873455b6f90a} 
+\index{separator.h@{separator.h}!Separator\_t@{Separator\_t}}
+\index{Separator\_t@{Separator\_t}!separator.h@{separator.h}}
+\doxysubsubsection{\texorpdfstring{Separator\_t}{Separator\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}} \mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}}}
+
+
+
+Stores command data for a group of pipes that are separated by operators. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{separator_8h_a36585e33a9700792efc865a598a9b840}\label{separator_8h_a36585e33a9700792efc865a598a9b840} 
+\index{separator.h@{separator.h}!constructCommands@{constructCommands}}
+\index{constructCommands@{constructCommands}!separator.h@{separator.h}}
+\doxysubsubsection{\texorpdfstring{constructCommands()}{constructCommands()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}} \texorpdfstring{$\ast$}{*} construct\+Commands (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{tokens,  }\item[{int}]{num\+Tokens,  }\item[{int \texorpdfstring{$\ast$}{*}}]{list\+Len }\end{DoxyParamCaption})}
+
+\Hypertarget{separator_8h_ac6e8a3d1b45819833c52d654bab23a7f}\label{separator_8h_ac6e8a3d1b45819833c52d654bab23a7f} 
+\index{separator.h@{separator.h}!freeSeparator@{freeSeparator}}
+\index{freeSeparator@{freeSeparator}!separator.h@{separator.h}}
+\doxysubsubsection{\texorpdfstring{freeSeparator()}{freeSeparator()}}
+{\footnotesize\ttfamily void free\+Separator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSeparator__t}{Separator\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{sep,  }\item[{int}]{sep\+Len }\end{DoxyParamCaption})}
+

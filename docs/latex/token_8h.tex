@@ -1,0 +1,353 @@
+\doxysection{src/parse/token/token.h File Reference}
+\hypertarget{token_8h}{}\label{token_8h}\index{src/parse/token/token.h@{src/parse/token/token.h}}
+{\ttfamily \#include "{}parse/char\+In/char\+In.\+h"{}}\newline
+Include dependency graph for token.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structToken__t}{Token\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores a single token from user input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}} \mbox{\hyperlink{token_8h_a40f021d9a74c0c58c621392831b0e6a4}{Token\+Type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores the type of a command line token. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \mbox{\hyperlink{token_8h_a3d101e338f608b680fa4d9deed676b1d}{Token\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores a single token from user input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}} \{ \newline
+\mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081cae7dfa366936528afaf5c79581179e712}{TOK\+\_\+\+WORD}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081ca8150d50bac50a6a46e46d189ed394aae}{TOK\+\_\+\+PIPE}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081cac247272d679194a325744db17694173d}{TOK\+\_\+\+REDIR\+\_\+\+IN}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081cae74ff38c194862cd72d1d67cc61b60f5}{TOK\+\_\+\+REDIR\+\_\+\+OUT}}
+, \newline
+\mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081ca6eba1c95a1dcec308cac9239230d17b0}{TOK\+\_\+\+REDIR\+\_\+\+APPEND}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081ca16bc7d20b5670857bee07747c2fdb353}{TOK\+\_\+\+REDIR\+\_\+\+HERE}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081cabc0bdfce1aff32bbb4ed86cafb34478a}{TOK\+\_\+\+REDIR\+\_\+\+RW}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081caf160143a78e902f4cdbdce1abeee3ed6}{TOK\+\_\+\+REDIR\+\_\+\+DUP\+\_\+\+IN}}
+, \newline
+\mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081ca2f29fa5191997134b67b05c42bb4ecb0}{TOK\+\_\+\+REDIR\+\_\+\+DUP\+\_\+\+OUT}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081ca0c71d11cff55a3c7099ad75da54fc553}{TOK\+\_\+\+REDIR\+\_\+\+DUP\+\_\+\+CLOSE\+\_\+\+IN}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081ca58f9684a57b0998fca32d801becb5d9a}{TOK\+\_\+\+REDIR\+\_\+\+DUP\+\_\+\+CLOSE\+\_\+\+OUT}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081caded8a8d44c88f59c76bc60bb60a63db8}{TOK\+\_\+\+AND}}
+, \newline
+\mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081ca780be26c548e285625baea0cba46490c}{TOK\+\_\+\+OR}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081ca50a4e2ee30d31c3712d3eba8bf0b54a9}{TOK\+\_\+\+SEMI}}
+, \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081ca0c0ec826f4c1a0558b765ade047b54f1}{TOK\+\_\+\+DUMMY}}
+ \}
+\begin{DoxyCompactList}\small\item\em Stores the type of a command line token. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{token_8h_af36fa1c27b39cbbbbd465af6182c04ea}{tokenize\+Input}} (char \texorpdfstring{$\ast$}{*}input, int \texorpdfstring{$\ast$}{*}num\+Processed\+Tokens, \mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}out\+Tokens, int last\+Exit)
+\begin{DoxyCompactList}\small\item\em Transform an input string into a series of tokens. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{token_8h_a528ee582d23e5a52baf66d7d9dd368d7}{set\+Type}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token)
+\begin{DoxyCompactList}\small\item\em Set the type of a \doxylink{structToken__t}{Token\+\_\+t} object baesd on its characters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8h_a82f3d9eb6a54f294c40cf1ea2738a784}{resize\+Buffer}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, int new\+Buff\+Size)
+\begin{DoxyCompactList}\small\item\em Resize the buffer for storing characters in a \doxylink{structToken__t}{Token\+\_\+t} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8h_abed75876f2f3912cdf9be62fb86c306c}{contains\+Char}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, char c)
+\begin{DoxyCompactList}\small\item\em Returns if a \doxylink{structToken__t}{Token\+\_\+t} contains a particular character. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8h_aba906f345ba5b3800a7e54fb81c66d80}{contains\+Substring}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, char \texorpdfstring{$\ast$}{*}sub)
+\begin{DoxyCompactList}\small\item\em Returns if a \doxylink{structToken__t}{Token\+\_\+t} contains a particular substring. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{token_8h_af2b55c173ecc69efd53a8d4195b04834}{extract\+Chars}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token, int expand)
+\begin{DoxyCompactList}\small\item\em Extracts the raw characters from \doxylink{structCharIn__t}{Char\+In\+\_\+t} objects within a \doxylink{structToken__t}{Token\+\_\+t} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8h_a2270a4c806e8bca9836935092c32c850}{is\+Redirect}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token)
+\begin{DoxyCompactList}\small\item\em Returns if a \doxylink{structToken__t}{Token\+\_\+t} is a redirect operator or not. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{token_8h_a22d15e005f23acc6dd7c30ea1fd1413a}{is\+Separator}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token)
+\begin{DoxyCompactList}\small\item\em Returns if a \doxylink{structToken__t}{Token\+\_\+t} is a separator operator or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{token_8h_a6bf2dc32f0ff7973ec876be1a5b9fee7}{print\+Token}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}token)
+\begin{DoxyCompactList}\small\item\em For debug, just print the contents of a token. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{token_8h_a0e082aa9e9ae63fb97ad5610b83a843b}{free\+Tokens}} (\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}tokens, int num\+Tokens)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{token_8h_a3d101e338f608b680fa4d9deed676b1d}\label{token_8h_a3d101e338f608b680fa4d9deed676b1d} 
+\index{token.h@{token.h}!Token\_t@{Token\_t}}
+\index{Token\_t@{Token\_t}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{Token\_t}{Token\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \mbox{\hyperlink{structToken__t}{Token\+\_\+t}}}
+
+
+
+Stores a single token from user input. 
+
+Stores the actually inputted characters as an array of type \doxylink{structCharIn__t}{Char\+In\+\_\+t} as well as the type of the token using \doxylink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}. \Hypertarget{token_8h_a40f021d9a74c0c58c621392831b0e6a4}\label{token_8h_a40f021d9a74c0c58c621392831b0e6a4} 
+\index{token.h@{token.h}!TokenType\_t@{TokenType\_t}}
+\index{TokenType\_t@{TokenType\_t}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{TokenType\_t}{TokenType\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}} \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}}}
+
+
+
+Stores the type of a command line token. 
+
+Stores if a character is a redirection symbol, pipe symbol, seperator, actual argument (word), etc. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081c}\label{token_8h_abf84b8f73da30c0f59581856a399081c} 
+\index{token.h@{token.h}!TokenType\_t@{TokenType\_t}}
+\index{TokenType\_t@{TokenType\_t}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{TokenType\_t}{TokenType\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t}}}
+
+
+
+Stores the type of a command line token. 
+
+Stores if a character is a redirection symbol, pipe symbol, seperator, actual argument (word), etc. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_WORD@{TOK\_WORD}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_WORD@{TOK\_WORD}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081cae7dfa366936528afaf5c79581179e712}\label{token_8h_abf84b8f73da30c0f59581856a399081cae7dfa366936528afaf5c79581179e712} 
+TOK\+\_\+\+WORD&Basic argument (word). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_PIPE@{TOK\_PIPE}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_PIPE@{TOK\_PIPE}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081ca8150d50bac50a6a46e46d189ed394aae}\label{token_8h_abf84b8f73da30c0f59581856a399081ca8150d50bac50a6a46e46d189ed394aae} 
+TOK\+\_\+\+PIPE&\textquotesingle{}\texorpdfstring{$\vert$}{|}\textquotesingle{} pipe symbol. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_REDIR\_IN@{TOK\_REDIR\_IN}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_REDIR\_IN@{TOK\_REDIR\_IN}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081cac247272d679194a325744db17694173d}\label{token_8h_abf84b8f73da30c0f59581856a399081cac247272d679194a325744db17694173d} 
+TOK\+\_\+\+REDIR\+\_\+\+IN&\textquotesingle{}\texorpdfstring{$<$}{<}\textquotesingle{} redirect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_REDIR\_OUT@{TOK\_REDIR\_OUT}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_REDIR\_OUT@{TOK\_REDIR\_OUT}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081cae74ff38c194862cd72d1d67cc61b60f5}\label{token_8h_abf84b8f73da30c0f59581856a399081cae74ff38c194862cd72d1d67cc61b60f5} 
+TOK\+\_\+\+REDIR\+\_\+\+OUT&\textquotesingle{}\texorpdfstring{$>$}{>}\textquotesingle{} redirect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_REDIR\_APPEND@{TOK\_REDIR\_APPEND}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_REDIR\_APPEND@{TOK\_REDIR\_APPEND}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081ca6eba1c95a1dcec308cac9239230d17b0}\label{token_8h_abf84b8f73da30c0f59581856a399081ca6eba1c95a1dcec308cac9239230d17b0} 
+TOK\+\_\+\+REDIR\+\_\+\+APPEND&\textquotesingle{}\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}\textquotesingle{} redirect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_REDIR\_HERE@{TOK\_REDIR\_HERE}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_REDIR\_HERE@{TOK\_REDIR\_HERE}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081ca16bc7d20b5670857bee07747c2fdb353}\label{token_8h_abf84b8f73da30c0f59581856a399081ca16bc7d20b5670857bee07747c2fdb353} 
+TOK\+\_\+\+REDIR\+\_\+\+HERE&\textquotesingle{}\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}\textquotesingle{} redirect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_REDIR\_RW@{TOK\_REDIR\_RW}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_REDIR\_RW@{TOK\_REDIR\_RW}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081cabc0bdfce1aff32bbb4ed86cafb34478a}\label{token_8h_abf84b8f73da30c0f59581856a399081cabc0bdfce1aff32bbb4ed86cafb34478a} 
+TOK\+\_\+\+REDIR\+\_\+\+RW&\textquotesingle{}\texorpdfstring{$<$}{<}\texorpdfstring{$>$}{>}\textquotesingle{} redirect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_REDIR\_DUP\_IN@{TOK\_REDIR\_DUP\_IN}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_REDIR\_DUP\_IN@{TOK\_REDIR\_DUP\_IN}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081caf160143a78e902f4cdbdce1abeee3ed6}\label{token_8h_abf84b8f73da30c0f59581856a399081caf160143a78e902f4cdbdce1abeee3ed6} 
+TOK\+\_\+\+REDIR\+\_\+\+DUP\+\_\+\+IN&\textquotesingle{}\texorpdfstring{$<$}{<}\&\textquotesingle{} redirect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_REDIR\_DUP\_OUT@{TOK\_REDIR\_DUP\_OUT}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_REDIR\_DUP\_OUT@{TOK\_REDIR\_DUP\_OUT}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081ca2f29fa5191997134b67b05c42bb4ecb0}\label{token_8h_abf84b8f73da30c0f59581856a399081ca2f29fa5191997134b67b05c42bb4ecb0} 
+TOK\+\_\+\+REDIR\+\_\+\+DUP\+\_\+\+OUT&\textquotesingle{}\texorpdfstring{$>$}{>}\&\textquotesingle{} redirect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_REDIR\_DUP\_CLOSE\_IN@{TOK\_REDIR\_DUP\_CLOSE\_IN}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_REDIR\_DUP\_CLOSE\_IN@{TOK\_REDIR\_DUP\_CLOSE\_IN}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081ca0c71d11cff55a3c7099ad75da54fc553}\label{token_8h_abf84b8f73da30c0f59581856a399081ca0c71d11cff55a3c7099ad75da54fc553} 
+TOK\+\_\+\+REDIR\+\_\+\+DUP\+\_\+\+CLOSE\+\_\+\+IN&\textquotesingle{}\texorpdfstring{$<$}{<}\&-\/\textquotesingle{} redirect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_REDIR\_DUP\_CLOSE\_OUT@{TOK\_REDIR\_DUP\_CLOSE\_OUT}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_REDIR\_DUP\_CLOSE\_OUT@{TOK\_REDIR\_DUP\_CLOSE\_OUT}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081ca58f9684a57b0998fca32d801becb5d9a}\label{token_8h_abf84b8f73da30c0f59581856a399081ca58f9684a57b0998fca32d801becb5d9a} 
+TOK\+\_\+\+REDIR\+\_\+\+DUP\+\_\+\+CLOSE\+\_\+\+OUT&\textquotesingle{}\texorpdfstring{$>$}{>}\&-\/\textquotesingle{} redirect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_AND@{TOK\_AND}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_AND@{TOK\_AND}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081caded8a8d44c88f59c76bc60bb60a63db8}\label{token_8h_abf84b8f73da30c0f59581856a399081caded8a8d44c88f59c76bc60bb60a63db8} 
+TOK\+\_\+\+AND&\textquotesingle{}\&\&\textquotesingle{} seperator. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_OR@{TOK\_OR}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_OR@{TOK\_OR}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081ca780be26c548e285625baea0cba46490c}\label{token_8h_abf84b8f73da30c0f59581856a399081ca780be26c548e285625baea0cba46490c} 
+TOK\+\_\+\+OR&\textquotesingle{}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}\textquotesingle{} seperator. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_SEMI@{TOK\_SEMI}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_SEMI@{TOK\_SEMI}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081ca50a4e2ee30d31c3712d3eba8bf0b54a9}\label{token_8h_abf84b8f73da30c0f59581856a399081ca50a4e2ee30d31c3712d3eba8bf0b54a9} 
+TOK\+\_\+\+SEMI&\textquotesingle{};\textquotesingle{} seperator. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_DUMMY@{TOK\_DUMMY}!token.h@{token.h}}\index{token.h@{token.h}!TOK\_DUMMY@{TOK\_DUMMY}}}\Hypertarget{token_8h_abf84b8f73da30c0f59581856a399081ca0c0ec826f4c1a0558b765ade047b54f1}\label{token_8h_abf84b8f73da30c0f59581856a399081ca0c0ec826f4c1a0558b765ade047b54f1} 
+TOK\+\_\+\+DUMMY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{token_8h_abed75876f2f3912cdf9be62fb86c306c}\label{token_8h_abed75876f2f3912cdf9be62fb86c306c} 
+\index{token.h@{token.h}!containsChar@{containsChar}}
+\index{containsChar@{containsChar}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{containsChar()}{containsChar()}}
+{\footnotesize\ttfamily int contains\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Returns if a \doxylink{structToken__t}{Token\+\_\+t} contains a particular character. 
+
+\doxylink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t} which is a word contains raw user input / words. Tests if a particular token, which must be a word, contains a character.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & The character to test if @token contains.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if character is contained, 0 if not. 
+\end{DoxyReturn}
+\Hypertarget{token_8h_aba906f345ba5b3800a7e54fb81c66d80}\label{token_8h_aba906f345ba5b3800a7e54fb81c66d80} 
+\index{token.h@{token.h}!containsSubstring@{containsSubstring}}
+\index{containsSubstring@{containsSubstring}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{containsSubstring()}{containsSubstring()}}
+{\footnotesize\ttfamily int contains\+Substring (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{char \texorpdfstring{$\ast$}{*}}]{sub }\end{DoxyParamCaption})}
+
+
+
+Returns if a \doxylink{structToken__t}{Token\+\_\+t} contains a particular substring. 
+
+\doxylink{token_8h_abf84b8f73da30c0f59581856a399081c}{Token\+Type\+\_\+t} which is a word contains raw user input / words. Tests if a particular token, which must be a word, contains a substring.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sub} & The substring to test if @token contains.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if substring is valid, 0 if not. 
+\end{DoxyReturn}
+\Hypertarget{token_8h_af2b55c173ecc69efd53a8d4195b04834}\label{token_8h_af2b55c173ecc69efd53a8d4195b04834} 
+\index{token.h@{token.h}!extractChars@{extractChars}}
+\index{extractChars@{extractChars}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{extractChars()}{extractChars()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} extract\+Chars (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{int}]{expand }\end{DoxyParamCaption})}
+
+
+
+Extracts the raw characters from \doxylink{structCharIn__t}{Char\+In\+\_\+t} objects within a \doxylink{structToken__t}{Token\+\_\+t} object. 
+
+Dynamically allocates and returns a list of characters, extracted from all \doxylink{structCharIn__t}{Char\+In\+\_\+t} objects within a \doxylink{structToken__t}{Token\+\_\+t} object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to extract text from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL if token is invalid, else the deep copy of raw chars. 
+\end{DoxyReturn}
+\Hypertarget{token_8h_a0e082aa9e9ae63fb97ad5610b83a843b}\label{token_8h_a0e082aa9e9ae63fb97ad5610b83a843b} 
+\index{token.h@{token.h}!freeTokens@{freeTokens}}
+\index{freeTokens@{freeTokens}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{freeTokens()}{freeTokens()}}
+{\footnotesize\ttfamily void free\+Tokens (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{tokens,  }\item[{int}]{num\+Tokens }\end{DoxyParamCaption})}
+
+\Hypertarget{token_8h_a2270a4c806e8bca9836935092c32c850}\label{token_8h_a2270a4c806e8bca9836935092c32c850} 
+\index{token.h@{token.h}!isRedirect@{isRedirect}}
+\index{isRedirect@{isRedirect}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{isRedirect()}{isRedirect()}}
+{\footnotesize\ttfamily int is\+Redirect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token }\end{DoxyParamCaption})}
+
+
+
+Returns if a \doxylink{structToken__t}{Token\+\_\+t} is a redirect operator or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if redirect operator, 0 if not, 0 if error.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns 0 if @token is null. 
+\end{DoxyNote}
+\Hypertarget{token_8h_a22d15e005f23acc6dd7c30ea1fd1413a}\label{token_8h_a22d15e005f23acc6dd7c30ea1fd1413a} 
+\index{token.h@{token.h}!isSeparator@{isSeparator}}
+\index{isSeparator@{isSeparator}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{isSeparator()}{isSeparator()}}
+{\footnotesize\ttfamily int is\+Separator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token }\end{DoxyParamCaption})}
+
+
+
+Returns if a \doxylink{structToken__t}{Token\+\_\+t} is a separator operator or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if separator operator, 0 if not, 0 if error.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns 0 if @token is null. 
+\end{DoxyNote}
+\Hypertarget{token_8h_a6bf2dc32f0ff7973ec876be1a5b9fee7}\label{token_8h_a6bf2dc32f0ff7973ec876be1a5b9fee7} 
+\index{token.h@{token.h}!printToken@{printToken}}
+\index{printToken@{printToken}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{printToken()}{printToken()}}
+{\footnotesize\ttfamily void print\+Token (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token }\end{DoxyParamCaption})}
+
+
+
+For debug, just print the contents of a token. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{token_8h_a82f3d9eb6a54f294c40cf1ea2738a784}\label{token_8h_a82f3d9eb6a54f294c40cf1ea2738a784} 
+\index{token.h@{token.h}!resizeBuffer@{resizeBuffer}}
+\index{resizeBuffer@{resizeBuffer}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{resizeBuffer()}{resizeBuffer()}}
+{\footnotesize\ttfamily int resize\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token,  }\item[{int}]{new\+Buff\+Size }\end{DoxyParamCaption})}
+
+
+
+Resize the buffer for storing characters in a \doxylink{structToken__t}{Token\+\_\+t} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to query. \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Buff\+Size} & The new buffer size to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New buffer size of token object @token or -\/1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{token_8h_a528ee582d23e5a52baf66d7d9dd368d7}\label{token_8h_a528ee582d23e5a52baf66d7d9dd368d7} 
+\index{token.h@{token.h}!setType@{setType}}
+\index{setType@{setType}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{token }\end{DoxyParamCaption})}
+
+
+
+Set the type of a \doxylink{structToken__t}{Token\+\_\+t} object baesd on its characters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em token} & The \doxylink{structToken__t}{Token\+\_\+t} to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{token_8h_af36fa1c27b39cbbbbd465af6182c04ea}\label{token_8h_af36fa1c27b39cbbbbd465af6182c04ea} 
+\index{token.h@{token.h}!tokenizeInput@{tokenizeInput}}
+\index{tokenizeInput@{tokenizeInput}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{tokenizeInput()}{tokenizeInput()}}
+{\footnotesize\ttfamily int tokenize\+Input (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{input,  }\item[{int \texorpdfstring{$\ast$}{*}}]{num\+Processed\+Tokens,  }\item[{\mbox{\hyperlink{structToken__t}{Token\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{out\+Tokens,  }\item[{int}]{last\+Exit }\end{DoxyParamCaption})}
+
+
+
+Transform an input string into a series of tokens. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & The raw user input to tokenize. \\
+\hline
+\mbox{\texttt{ out}}  & {\em num\+Processed\+Tokens} & The number of processed tokens before and after tokenization. \\
+\hline
+\mbox{\texttt{ out}}  & {\em out\+Tokens} & The \doxylink{structToken__t}{Token\+\_\+t} array to populate. \\
+\hline
+\mbox{\texttt{ in}}  & {\em last\+Exit} & The status from the last call to tokenize.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code of tokenization. 0 if success, 1 if general error, and -\/1 on unclosed single quote, -\/2 on unclosed double quote, -\/3 on unclosed backslash, -\/4 on unclosed pipe, -\/5 on unclosed AND, -\/6 on unclosed OR. 
+\end{DoxyReturn}
