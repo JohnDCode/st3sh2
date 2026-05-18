@@ -9,6 +9,9 @@
 
 int main() {
 
+	// Status of last executed cmd
+	int exitStatus = 0;
+
 	// Main loop
 	while (1) {
 
@@ -16,8 +19,10 @@ int main() {
 	    char *cwd = getcwd(NULL, 0);
 		if (cwd == NULL) {
 		    perror("cwd");
+		    if (exitStatus) { printf("(%d) ", exitStatus); }
 		    printf("st3sh: ? ➜ ");
 		} else {
+			if (exitStatus) { printf("(%d) ", exitStatus); }
 		    printf("st3sh: %s ➜ ", cwd);
 		    free(cwd);
 		}
@@ -40,7 +45,7 @@ int main() {
 		// Tokenize input (first pass), just do one pass for now
 		Token_t* tokens = NULL;
 		int numTokens = 0;
-		int status = tokenizeInput(line, &numTokens, &tokens, 0);
+		int tokenStatus = tokenizeInput(line, &numTokens, &tokens, 0);
 
 		// Put input into a list of separators (second pass)
 		int listLen = 0;
@@ -48,7 +53,7 @@ int main() {
 
 		// Execute all entires in command list
 		for (int i = 0; i < listLen; ++i) {
-			execSeparator(processedInput + i);
+			exitStatus = execSeparator(processedInput + i);
 		}
 		
 		// Free resources

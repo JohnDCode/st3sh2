@@ -1,7 +1,7 @@
 To Do:
 
 
-Features:
+Shell Features:
 
 - Commands subsitution / subshell grouping
 - Control flow / basic scripting
@@ -9,9 +9,14 @@ Features:
 - variable & tilde expansion
 
 
-Also cleanup second parse pass code, very messy.
-Recursive first pass
-Printing status codes on exit
-Pty, escape characters in pty
+Pty Features:
+
+- ANSI escape sequences support
+
+
+General:
+
+- Cleanup second pass parse code in separator.c, very messy
+- Make first pass recursive if input isn't closed.
 
 */
