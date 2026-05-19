@@ -77,7 +77,7 @@ class AboutScreen(screen.Screen):
 		img = self.aboutFont.render('This is st3sh, an (almost) POSIX-compliant shell and terminal:', True, (0, 0, 0))
 		background.blit(img, (80, 134))
 
-		img = self.aboutFont.render('Shell is written in C17 and supports pipelines, separators', True, (0, 0, 0))
+		img = self.aboutFont.render('Shell is written in C17 and supports pipelines, separators,', True, (0, 0, 0))
 		background.blit(img, (120, 184))
 
 		img = self.aboutFont.render('various redirect operators, etc. Terminal (UI) is written in', True, (0, 0, 0))
@@ -93,7 +93,7 @@ class AboutScreen(screen.Screen):
 		background.blit(img, (80, 354))
 
 		self.aboutFont.set_underline(True)
-		img = self.aboutFont.render('github.com/JohnDCode/st3sh', True, (0, 0, 0))
+		img = self.aboutFont.render('github.com/JohnDCode/st3sh2', True, (0, 0, 0))
 		background.blit(img, (120, 404))
 
 		img = self.aboutFont.render('johndcode.com/posts/About-Me', True, (0, 0, 0))
