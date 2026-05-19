@@ -74,13 +74,13 @@ class AboutScreen(screen.Screen):
 		background.blit(img, (80, 99))
 
 		self.aboutFont.set_bold(False)
-		img = self.aboutFont.render('This is st3sh, an all inclusive POSIX-compatiable shell and terminal:', True, (0, 0, 0))
+		img = self.aboutFont.render('This is st3sh, an (almost) POSIX-compliant shell and terminal:', True, (0, 0, 0))
 		background.blit(img, (80, 134))
 
-		img = self.aboutFont.render('Shell is written in C17 and plans to support environment', True, (0, 0, 0))
+		img = self.aboutFont.render('Shell is written in C17 and supports pipelines, separators', True, (0, 0, 0))
 		background.blit(img, (120, 184))
 
-		img = self.aboutFont.render('variables, scripting, and more. Terminal (UI) is written in', True, (0, 0, 0))
+		img = self.aboutFont.render('various redirect operators, etc. Terminal (UI) is written in', True, (0, 0, 0))
 		background.blit(img, (120, 219))
 
 		img = self.aboutFont.render('Python 3.12 using Pygame 2. Additional features coming soon!', True, (0, 0, 0))
