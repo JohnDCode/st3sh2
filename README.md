@@ -84,16 +84,14 @@ Most features to satisfy this standard have been implemented. See the toDo list 
 
 ---
 
-## libpty — The Pseudo-Terminal
+## The Pseudo-Terminal
 
 ### Multithreaded Architecture
 
-`libpty` manages PTY master/slave pairs and the I/O routing between them using a dedicated thread model. Rather than relying on `select`/`poll` loops in the main thread, the library spins up background threads to handle:
+The pty manages PTY master/slave pairs and the I/O routing between them using a dedicated thread model. Rather than relying on `select`/`poll` loops in the main thread, the library spins up background threads to handle:
 
 - **Reader thread** — Continuously reads from the PTY master and forwards data to the application layer
 - **Writer thread** — Drains a write queue and sends data to the master without blocking the caller
 - **Synchronization** — Thread-safe queues and condition variables coordinate between producer and consumer threads cleanly
 
 This means the calling application never blocks on terminal I/O — reads and writes are non-blocking from the caller's perspective.
-
-MIT License. See [LICENSE](LICENSE) for details.
