@@ -139,7 +139,10 @@ int tokenizeInput(char* input, int* numProcessedTokens, Token_t** outTokens,
 			}
 
 		// Check for seperating tokens
-		} else if ((*curChar == ' ' || *curChar == '\t' || *curChar == '\n')
+		} else if (*curChar == '\n' || *curChar == '\r') {
+			;
+
+		} else if ((*curChar == ' ' || *curChar == '\t')
 			&& (qStatus == QUOTED_NONE)) {
 
 			// Check for empty tokens
@@ -272,13 +275,6 @@ int tokenizeInput(char* input, int* numProcessedTokens, Token_t** outTokens,
 
 	// if the last token is finalized and is a pipe / separator then need to throw an error
 
-	// Input is finished, reallocate
-	tmp = realloc(*outTokens, *numProcessedTokens * sizeof(Token_t));
-	if (tmp == NULL) {
-		perror("realloc");
-		exit(EXIT_FAILURE);
-	}
-
 	// if the quote isn't none then the last token is complete, num processed tokens shoudl have been eset accordingly
 
 	// Return status code
@@ -304,8 +300,14 @@ int tokenizeInput(char* input, int* numProcessedTokens, Token_t** outTokens,
 		return -6;
 	}
 
-	// Set out parameter and return
+	// Input is finished, reallocate
+	tmp = realloc(*outTokens, *numProcessedTokens * sizeof(Token_t));
+	if (tmp == NULL) {
+		perror("realloc");
+		exit(EXIT_FAILURE);
+	}
 	*outTokens = tmp;
+
 	return 0;
 }
 

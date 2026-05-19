@@ -6,7 +6,6 @@
 #include "parse/separator/separator.h"
 #include "exec/exec.h"
 
-
 int main() {
 
 	// Status of last executed cmd
@@ -15,23 +14,22 @@ int main() {
 	// Main loop
 	while (1) {
 
-		// Retrieve current working directory
+		// Print proc cwd and exit code of last cmd
 	    char *cwd = getcwd(NULL, 0);
 		if (cwd == NULL) {
 		    perror("cwd");
 		    if (exitStatus) { printf("(%d) ", exitStatus); }
-		    printf("st3sh: ? ➜ ");
+		    printf("st3sh: ? > ");
 		} else {
 			if (exitStatus) { printf("(%d) ", exitStatus); }
-		    printf("st3sh: %s ➜ ", cwd);
+		    printf("st3sh: %s > ", cwd);
 		    free(cwd);
 		}
 		fflush(stdout);
 
 		// Get user input
-		char *line = NULL;
+		char* line = NULL;
 		size_t buffer = 0;
-
 		if (getline(&line, &buffer, stdin) == -1) {
 			if (feof(stdin)) {
 				printf("\n");
@@ -42,10 +40,31 @@ int main() {
 			}
 		}
 
-		// Tokenize input (first pass), just do one pass for now
+		// Tokenize input (first pass)
 		Token_t* tokens = NULL;
 		int numTokens = 0;
 		int tokenStatus = tokenizeInput(line, &numTokens, &tokens, 0);
+
+		// Keep querying user input until all pipes/quotes/seps are closed
+		while (tokenStatus != 0) {
+
+			// Get user input again
+			line = NULL;
+			buffer = 0;
+			printf("> ");
+			if (getline(&line, &buffer, stdin) == -1) {
+				if (feof(stdin)) {
+					printf("\n");
+					break;
+				} else {
+		    		perror("getline");
+		    		continue;
+				}
+			}
+
+			// Tokenize again
+			tokenStatus = tokenizeInput(line, &numTokens, &tokens, tokenStatus);
+		}
 
 		// Put input into a list of separators (second pass)
 		int listLen = 0;

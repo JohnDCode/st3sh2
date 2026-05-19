@@ -18,5 +18,6 @@ General:
 
 - Cleanup second pass parse code in separator.c, very messy
 - Make first pass recursive if input isn't closed.
+- Film video and make cool readMe
 
 */
