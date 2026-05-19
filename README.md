@@ -1,8 +1,7 @@
 # st3sh2
 
-> A POSIX-compliant shell and multithreaded pseudo-terminal — built from scratch.
-> Note: None of the code in this project was generated via AI. \\
-
+> A POSIX-compliant shell and multithreaded pseudo-terminal — built from scratch. \\
+None of the code in this project was generated via AI.
 However, most of this readme has been generated via AI.
 ---
 
